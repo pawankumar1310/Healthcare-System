@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h1>Listing of All Medicine</h1>
+<ul>
+{% for post in object_list %}
+	<li><a href="{% url 'manufacturer-detail'  post.pk %}">{{post.name_manufacturer}}</a> 
+
+{% endfor %}
+</ul>
+
+{% endblock %}
+

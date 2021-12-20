@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+	<h1>{{medicine.name_medicine}}</h1>
+	<img src="{{medicine.picture.url}}">
+	<h5>Substitute Medicine:</h5> {{medicine.subMedicine }}
+	<h5>Manufacturer:<li><a href="{% url 'manufacturer-details'  medicine.pk %}">{{ medicine.manufactured_by }}</a></h5>
+	<h5>Use :</h5> {{medicine.use_medicine}}
+	<h5>Price :</h5> {{medicine.price_medicine}}
+	<h5>Benefits :</h5> {{medicine.benefits_medicine}}
+	<h5>Side Effects :</h5> {{medicine.side_effects_medicine}}
+	<h5>Safety Advice :</h5> {{medicine.safety_advice_medicine}}
+
+{% endblock %}
